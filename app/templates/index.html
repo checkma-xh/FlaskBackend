@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul>
+    {% for line in data %}
+    <li>{{ line.return_value() }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
