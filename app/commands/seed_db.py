@@ -58,7 +58,6 @@ def seed_db():
     db.session.add_all([new_user(faker, 1, 1) for _ in range(ORG_NUM)])
 
     # ! 先 commit 才能用数据, 否则拿到的所有对象都为空
-    # * org_admin, dorm_admin, resident, mtn_tech_admin, dorm, room, tech_detail, res_info, dorm_mtn_manager, dorm_manager, mtn_request, mtn_task, mtn_status
     for org in Org.query.filter(Org.id > 1).all():
         org_admin_data  = [new_user(faker, org.id, 2) for _ in range(ORG_ADMIN_NUM)]
         dorm_admin_data = [new_user(faker, org.id, 3) for _ in range(DORM_ADMIN_NUM)]

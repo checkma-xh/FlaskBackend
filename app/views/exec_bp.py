@@ -180,7 +180,7 @@ class MtnStatusData(Resource):
             abort(400)
 
         img_dir = os.path.join(
-            *os.getenv("IMG_DIR", "C:/Users/check/Documents/imgs").split("/"),
+            *os.getenv("IMG_DIR", "/etc").split("/"),
             "orgs",
             str(current_user.org_id),
             "user",
