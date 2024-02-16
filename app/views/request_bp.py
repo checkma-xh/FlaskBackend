@@ -107,7 +107,7 @@ class MtnRequestData(Resource):
             trim     = False,
         )
 
-    # * GET /request/users/<int:user_id>/mtn_request?page=<int>&pagesize=<int>&completed=<int>
+    # * GET /request/users/<int:user_id>/mtn_request?page=<int>&pagesize=<int>&completed=<boolean>
     @jwt_required()
     def get(self, user_id):
         current_user = get_current_user()
@@ -212,7 +212,7 @@ class MtnStatusData(Resource):
         # * args parser
         ...
 
-    # * GET/request/users/<int:user_id>/mtn_requests/<int:mtn_request_id>/mtn_statuses
+    # * GET /request/users/<int:user_id>/mtn_requests/<int:mtn_request_id>/mtn_statuses
     @jwt_required()
     def get(self, user_id: int, mtn_request_id: int):
         current_user   = get_current_user()

@@ -83,7 +83,7 @@ class RoomDataAnalysis(Resource):
             trim     = True,
         )
     
-    # * GET /data_analysis/orgs/<int:org_id>/dorm/<int:dorm_id>/rooms
+    # * GET /data_analysis/orgs/<int:org_id>/dorm/<int:dorm_id>/rooms?page=<int>&pagesize=<int>start_time=<str>&end_time=<str>&ASC=<boolean>&sort_field=<str>
     @jwt_required()
     def get(self, org_id: int, dorm_id: int):
         current_user = get_current_user()
@@ -192,7 +192,7 @@ class DormDataAnalysis(Resource):
             trim     = True,
         )
 
-    # * GET /data_analysis/orgs/<int:org_id>/dorms
+    # * GET /data_analysis/orgs/<int:org_id>/dorms?page=<int>&pagesize=<int>start_time=<str>&end_time=<str>&ASC=<boolean>
     @jwt_required()
     def get(self, org_id: int):
         current_user = get_current_user()
@@ -303,7 +303,7 @@ class TechMtnCount(Resource):
             trim     = True,
         )
 
-    
+    # * GET /data_analysis/orgs/<int:org_id>/users?page=<int>&pagesize=<int>start_time=<str>&end_time=<str>&ASC=<boolean>
     @jwt_required()
     def get(self, org_id: int):
         current_user = get_current_user()

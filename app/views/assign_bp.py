@@ -66,7 +66,7 @@ class MtnRequestData(Resource):
             trim     = True,
         )
 
-    # * GET /assign/dorm/<int:dorm_id>/mtn_requests
+    # * GET /assign/dorm/<int:dorm_id>/mtn_requests?page=<int>&pagesize=<int>&completed=<boolean>&mtn_tech_id=<int>
     @jwt_required()
     def get(self, dorm_id):
         current_user = get_current_user()

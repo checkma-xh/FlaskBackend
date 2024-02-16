@@ -59,7 +59,7 @@ class MtnTaskData(Resource):
             trim     = True,
         )
 
-    # * GET /exec/user/<int:user_id>/mtn_tasks
+    # * GET /exec/user/<int:user_id>/mtn_tasks?page=<int>&pagesize=<int>&completed=<boolean>
     @jwt_required()
     def get(self, user_id):
         current_user = get_current_user()

@@ -44,6 +44,7 @@ from .views import auth_bp
 from .views import control_bp
 from .views import data_analysis_bp
 from .views import exec_bp
+# from .views import org_data_bp
 from .views import request_bp
 from .views import userinfo_bp
 
@@ -53,6 +54,7 @@ app.register_blueprint(auth_bp)
 app.register_blueprint(control_bp)
 app.register_blueprint(data_analysis_bp)
 app.register_blueprint(exec_bp)
+# app.register_blueprint(org_data_bp)
 app.register_blueprint(request_bp)
 app.register_blueprint(userinfo_bp)
 
