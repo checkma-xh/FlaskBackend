@@ -67,4 +67,6 @@ flask run
 
 ```shell
 未部署到 WSGI 服务器
+未使用 Redis
+未使用 Celery
 ```
