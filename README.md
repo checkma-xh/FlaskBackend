@@ -56,7 +56,7 @@ Werkzeug==3.0.1
 
 ```
 
->  run
+> run
 
 ```
 shell
@@ -65,4 +65,11 @@ env\Script\activate        # NT
 source env/bin/activate    # Linux
 pip install -m requirements.txt    # 首次运行
 flask run
+```
+
+>  To be completed
+
+```
+shell
+未部署到 WSGI 服务器
 ```
