@@ -2,8 +2,7 @@
 
 > .flaskenv
 
-```
-shell
+```shell
 FLASK_APP   = app
 FLASK_ENV   = development
 FLASK_DEBUG = 1
@@ -11,8 +10,7 @@ FLASK_DEBUG = 1
 
 > .env
 
-```
-shell
+```shell
 SECRET_KEY                = e68a56aaa9da4738968840caa16cb63e
 JWT_SECRET_KEY            = 76b93f66f1e041f78deefde9cbe66d63
 DATABASE_URI              = mysql%3A//root%3AWlj%2B%3D9351524%40120.24.177.83%3A3306/my_db
@@ -27,8 +25,7 @@ CELERY_RESULT_BACKEND     = redis%3A//default%3AWlj%2B%3D9351524%40120.24.177.83
 
 > requirements.txt
 
-```
-shell
+```shell
 aniso8601==9.0.1
 blinker==1.7.0
 click==8.1.7
@@ -58,8 +55,7 @@ Werkzeug==3.0.1
 
 > run
 
-```
-shell
+```shell
 cd /Flask_Backend
 env\Script\activate        # NT
 source env/bin/activate    # Linux
@@ -69,7 +65,6 @@ flask run
 
 >  To be completed
 
-```
-shell
+```shell
 未部署到 WSGI 服务器
 ```
