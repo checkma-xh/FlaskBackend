@@ -41,7 +41,7 @@ class Login(Resource):
             trim     = True,
         )
 
-    # * POST /auth/users/login
+    # * POST /auth/login
     def post(self):
         args = self.json_parser.parse_args()
         current_user = User.query.filter_by(account=args.get("account")).first_or_404()
@@ -56,7 +56,7 @@ class Login(Resource):
 
 
 class Refresh(Resource):
-    # * POST /auth/users/refresh
+    # * POST /auth/refresh
     @jwt_required(refresh=True)
     def post(self):
         return jsonify(
@@ -66,7 +66,7 @@ class Refresh(Resource):
 
 
 class Logout(Resource):
-    # * POST /auth/users/logout
+    # * POST /auth/logout
     @jwt_required()
     def post(self):
         """
