@@ -63,7 +63,7 @@ pip install -m requirements.txt    # 首次运行
 flask run
 ```
 
->  To be completed
+> 1. To be completed
 
 ```shell
 未部署到 WSGI 服务器

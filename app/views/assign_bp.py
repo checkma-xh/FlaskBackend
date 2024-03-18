@@ -107,6 +107,7 @@ class MtnRequestData(Resource):
                     filter(MtnRequest.completed == completed).\
                     filter(MtnTask.mtn_tech_id == mtn_tech_id).\
                     paginate(page=page, per_page=pagesize)
+                
         return jsonify(
             data        = [mtn_request.to_dict() for mtn_request in mtn_requests] if mtn_requests else None,
             status_code = 200,
